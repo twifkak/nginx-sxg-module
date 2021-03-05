@@ -117,4 +117,5 @@ http {
 
 nginx-sxg-module automatically includes signatures of subresources in its responses, allowing end users to prefetch it from distributor.
 When finding `link: rel="preload"` entry in HTTP response header from upstream, this plugin will collect the specified resource to the upstream and append `rel="allowed-alt-sxg";header-integrity="sha256-...."` to the original HTTP response automatically.
+It only works for subresource URLs that map to an upstream server, such as with `proxy_pass`.
 This functionality is essential to subresource preloading for faster cross-site navigation.
